@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Smoky" verbose="1">
+    <test name="Smoky">
+        <classes>
+            <class name="com.webshop.tests.HomePageTests"/>
+            <class name="com.webshop.tests.LoginTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+            <class name="com.webshop.tests.AddItemToCartTests"/>
+            <class name="com.webshop.tests.DeleteItemTests"/>
+        </classes>
+    </test>
+</suite>
