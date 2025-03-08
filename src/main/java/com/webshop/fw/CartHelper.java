@@ -16,7 +16,9 @@ public class CartHelper extends BaseHelper{
     }
 
     public void addSelectedItemToCart() {
-        click(By.xpath("//input[contains(@onclick, '/catalog/31/')]"));
+        //click(By.xpath(("//*[contains(text(), '" + product.getName() + "')]//following::input[contains(@value, 'Add to cart')][1]")));
+        //click(By.xpath("//a[contains(text(), '" + product.getName() + "')]/ancestor::div[contains(@class, 'product-item')]//input[contains(@value, 'Add to cart')]"));
+       click(By.xpath("//input[contains(@onclick, '/catalog/31/')]")); // this only for the second item with the text laptop
     }
 
     public void removeItem() {
