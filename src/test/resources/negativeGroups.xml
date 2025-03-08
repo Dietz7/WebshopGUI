@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Quick" verbose="1">
+   <groups>
+       <run>
+           <include name="negative"/>
+       </run>
+   </groups>
+    <test name="Negative">
+        <classes>
+            <class name="com.webshop.tests.LoginTests">
+            <methods>
+                <exclude name=".*Positive.*"/>
+            </methods>
+            </class>
+            <class name="com.webshop.tests.CreateAccountTests">
+                <methods>
+                    <exclude name=".*Positive.*"></exclude>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
