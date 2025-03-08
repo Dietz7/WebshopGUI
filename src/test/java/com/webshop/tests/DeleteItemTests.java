@@ -14,7 +14,7 @@ public class DeleteItemTests extends TestBase {
 
     @Test
     public void deleteItemPositiveTest(){
-        // app.getUser().confirmLogin();
+        //app.getUser().confirmLogin();
         //select the second product on the page and add to the cart
         app.getItem().addSelectedItemToCart();
 
