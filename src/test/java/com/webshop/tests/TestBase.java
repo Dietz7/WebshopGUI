@@ -35,13 +35,13 @@ public class TestBase {
         logger.info("******************************************************");
     }
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setUp() {
         app.init();
     }
 
     //@AfterMethod(enabled = false)
-    @AfterSuite(enabled = false)
+    @AfterSuite(alwaysRun = true)
     public void tearDown() {
         app.stop();
     }
