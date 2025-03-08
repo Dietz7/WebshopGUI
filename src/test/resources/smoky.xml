@@ -11,6 +11,16 @@
             </class>
             <class name="com.webshop.tests.AddItemToCartTests"/>
             <class name="com.webshop.tests.DeleteItemTests"/>
+            <class name="com.webshop.tests.CreateAccountTests">
+            <parameter name="FirstName" value="Lucy"></parameter>
+            <parameter name="LastName" value="May"></parameter>
+            <parameter name="Email" value="Lucy.may@gmail.com"></parameter>
+            <parameter name="Password" value="Qwerty321"></parameter>
+
+                <methods>
+                    <exclude name=".*From.*"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
