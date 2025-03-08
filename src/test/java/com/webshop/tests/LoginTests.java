@@ -1,5 +1,6 @@
 package com.webshop.tests;
 
+import com.webshop.data.UserData;
 import com.webshop.models.User;
 import com.webshop.tests.TestBase;
 import org.testng.Assert;
@@ -21,17 +22,17 @@ public class LoginTests extends TestBase {
     @Test()
     public void loginPositiveTest() {
         app.getUser().clickOnLoginLink();
-        app.getUser().fillLoginFields(new User().setEmail("juli777@gmail.com").setPassword("Qwerty1!$"));
+        app.getUser().fillLoginFields(new User().setEmail(UserData.EMAIL).setPassword(UserData.PASSWORD));
         app.getUser().confirmLogin();
         Assert.assertTrue(app.getUser().isAccountPresent());
         // Log out :)
         //click(By.cssSelector("a.ico-logout[href='/logout"));
     }
 
-    @Test()
+    @Test(groups = "negative")
     public void loginNegativeWithoutEmailTest() {
         app.getUser().clickOnLoginLink();
-        app.getUser().fillLoginFields(new User().setPassword("Qwerty1!$"));
+        app.getUser().fillLoginFields(new User().setPassword(UserData.PASSWORD));
         app.getUser().confirmLogin();
         Assert.assertFalse(app.getUser().isAccountPresent());
 
